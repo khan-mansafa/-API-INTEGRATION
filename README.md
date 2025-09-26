@@ -84,4 +84,5 @@ Forecast API → To fetch weather data using those coordinates.
 
 This project highlights the practical use of API Integration in web development. APIs act as a bridge between applications, allowing developers to use external data and services without building everything from scratch. By learning to integrate APIs, developers gain skills to work with real-world applications such as weather dashboards, news feeds, stock market trackers, and more.
 
-
+OUTPUT:
+[task disply1.pdf](https://github.com/user-attachments/files/22557099/task.disply1.pdf)
