@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Weather Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#weather">Weather</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <!-- Weather Section -->
+  <section id="weather">
+    <header>
+      <div>
+        <h1>Weather Prediction</h1>
+        <p class="lead">Responsive webpage that fetches public API data (Open-Meteo) and displays it dynamically.</p>
+      </div>
+      <div class="small muted">API: Open-Meteo (no key required)</div>
+    </header>
+
+    <div class="card">
+      <div>
+        <label for="city" class="small muted">Enter city name</label>
+        <div class="search-row">
+         <input id="city" class="input" placeholder="e.g., New York, Tokyo, Delhi" />
+<button id="searchBtn" class="btn">Search</button>
+
+        </div>
+        <div id="status" class="muted small" style="margin-top:8px"></div>
+      </div>
+
+      <div class="grid">
+        <div class="card now" id="leftPanel">
+          <div id="locationTitle" class="muted">Location</div>
+          <div id="currentCard" style="display:none">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div class="big-temp" id="temp"></div>
+                <div class="muted" id="cond">Current weather</div>
+              </div>
+              <div class="meta">
+                <div><strong id="wind">-</strong><div class="muted small">wind (m/s)</div></div>
+                <div><strong id="pressure">-</strong><div class="muted small">pressure</div></div>
+                <div><strong id="time">-</strong><div class="muted small">local time</div></div>
+              </div>
+            </div>
+
+            <div style="margin-top:10px">
+              <div class="muted small">Hourly forecast (next 12 hours)</div>
+              <div id="forecastHour" class="forecast-list" aria-live="polite"></div>
+            </div>
+          </div>
+          <div id="noData" class="muted small" style="margin-top:12px">
+            Search for a city to load weather data.
+          </div>
+        </div>
+
+        <div class="card" id="rightPanel">
+          <h3 style="margin:0 0 8px 0">Details & 24-hour table</h3>
+          <div id="details" class="muted small">No details yet.</div>
+          <table id="hourTable" style="display:none">
+            <thead>
+              <tr><th>Time</th><th>Temp (°C)</th><th>Humidity (%)</th><th>Wind (m/s)</th></tr>
+            </thead>
+            <tbody id="hourBody"></tbody>
+          </table>
+          <div class="footer">Built for CodTech Internship — dynamic API integration demo</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;text-align:center">
+      <small class="muted">Tip: This page uses Open-Meteo geocoding and forecast endpoints; no API key needed.</small>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="margin-top:50px">
+    <div class="card">
+      <h2>About This Project</h2>
+      <p>
+        The <strong>Weather Dashboard</strong> is developed as part of the CodTech Internship.
+        It demonstrates integration with a public API (<em>Open-Meteo</em>) to fetch real-time
+        weather data and display it dynamically in a responsive user interface.
+      </p>
+      <p>
+        Features include:
+        <ul>
+          <li>City-based weather search</li>
+          <li>Current temperature, wind, and pressure</li>
+          <li>12-hour forecast display</li>
+          <li>Detailed 24-hour table with humidity and wind</li>
+        </ul>
+      </p>
+      <p>
+        <strong>Built with:</strong> HTML, CSS, and JavaScript.
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
