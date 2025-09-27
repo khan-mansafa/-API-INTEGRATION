@@ -12,6 +12,8 @@
 
 *MENTOR*: NEELA SANTOSH
 
+TASK 1
+
 🌐 Weather Dashboard — Project Description
 
 This project is a Weather Dashboard Web Application developed as part of the CodTech Internship Task-1. The goal of the project was to build a responsive webpage that integrates with a public API and displays data dynamically. The chosen public API is Open-Meteo, a free weather API that provides current and forecast weather information without requiring an API key.
